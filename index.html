@@ -564,98 +564,7 @@
     <div>
 
         <div class="custom-css w-embed"><!-- Use this symbol to insert css during development --></div>
-        <!-- <div class="loader-wrapper w-embed w-script"><canvas id="loader"></canvas>
-            <script>
-
-                //addHtmlPadd();
-                const loader = document.getElementById("loader");
-                const loaderTx = loader.getContext("2d");
-                const loaderWrp = document.querySelector('.loader-wrapper');
-                //making the canvas full screen
-                loader.height = window.innerHeight;
-                loader.width = window.innerWidth;
-
-                //code characters - taken from the unicode charset
-                let code = "1001000111010101010101100101001111110101010101111010";
-                //converting the string into an array of single characters
-                code = code.split("");
-
-                const font_size = 10;
-                const columns = loader.width / font_size; //number of columns for the rain
-                //an array of drops - one per column
-                const drops = [];
-                //x below is the x coordinate
-                //1 = y co-ordinate of the drop(same for every drop initially)
-                for (let x = 0; x < columns; x++)
-                    drops[x] = 1;
-
-                //drawing the characters
-                function draw() {
-                    //Black BG for the canvas
-                    //translucent BG to show trail
-                    loaderTx.fillStyle = "#2A29270D";
-                    loaderTx.fillRect(0, 0, loader.width, loader.height);
-
-                    loaderTx.fillStyle = "blue"; // text color
-                    loaderTx.font = font_size + "px arial";
-                    //looping over drops
-                    for (let i = 0; i < drops.length; i++) {
-                        //a random code character to print
-                        let text = code[Math.floor(Math.random() * code.length)];
-                        //x = i*font_size, y = value of drops[i]*font_size
-                        loaderTx.fillText(text, i * font_size, drops[i] * font_size);
-
-                        //sending the drop back to the top randomly after it has crossed the screen
-                        //adding a randomness to the reset to make the drops scattered on the Y axis
-                        if (drops[i] * font_size > loader.height && Math.random() > 0.975)
-                            drops[i] = 0;
-
-                        //incrementing Y coordinate
-                        drops[i]++;
-                    }
-                }
-
-                setInterval(draw, 33);
-                let loadingTime = new Date();
-                if (!document.body.getAttribute('data-model')) {
-                    document.onreadystatechange = function () {
-                        switch (document.readyState) {
-                            case 'loading':
-                                break;
-                            case 'interactive':
-                                break;
-                            case 'complete':
-                                const completeTime = new Date() - loadingTime;
-                                const delay = completeTime > 1000 ? 0 : 1000 - completeTime;
-                                setTimeout(() => {
-                                    loaderWrp.classList.add('loader-wrapper--hidden');
-                                    setTimeout(() => {
-                                        loaderWrp.remove();
-                                        //removeHtmlPadd();
-                                    }, 400);
-                                }, delay);
-                                break;
-                            default:
-                                break;
-                        }
-                    };
-                }
-
-
-                function addHtmlPadd() {
-                    const htmlPad = window.innerWidth - document.querySelector("html").offsetWidth + "px";
-                    document.querySelector("html").style.paddingRight = htmlPad;
-                    document.querySelector('html').style.overflow = 'hidden';
-                }
-
-                function removeHtmlPadd() {
-                    setTimeout(() => {
-                        document.querySelector('html').style.overflow = 'auto';
-                        document.querySelector("html").style.paddingRight = "0px";
-                    }, 500);
-                }
-            </script>
-        </div> -->
+      
 
 
         <div class="cursor-wrp">
@@ -706,7 +615,8 @@
                         </div>
 
                         <div class="navbar-menu-item-wrp"><a class="navbar-menu__item w-nav-link">About Us</a></div>
-                        <div class="navbar-menu-item-wrp"><a href="#"
+                        <div class="navbar-menu-item-wrp">
+                            <a href="#"
                                 class="navbar-menu__item navbar-menu__item--drop w-nav-link">Resources</a>
                             <div class="navbar-menu__dropdown blur-wrapper">
                                 <div class="dropdown-menu__right-part">
@@ -855,31 +765,9 @@
                             </a>
                         </div>
                     </div>
-                    <!-- <div data-pos="-430, -760, -830" class="animation-step home__animation-step-2"></div>
-                    <div data-pos="-80, -760, -830"
-                        class="animation-step animation-step--md home__animation-step--md-2"></div>
-                    <div data-pos="-80, -100, -830"
-                        class="animation-step animation-step--sm home__animation-step--sm-2"></div> -->
                 </div>
 
-                <!-- <div class="sticky-grid">
-                    <div>
-                        <img src="https://simplicapital.ai/wp-content/uploads/2021/08/Group-2952.png" />
-                    </div>
-                    <div data-w-id="c57f3605-9589-3e26-c97c-dd096a6e0955" class="sticky__cards sticky__cards--margined">
-                        <div class="sticky__card">
-                            <h3 data-w-id="684a929e-b5fa-8373-4b73-b70b58f952ae" class="h4 problems-card__title">
-                                Intuitive, personalized, and highly relevant interface</h3>
-                            <p class="paragraph gray--3">Real-time data visualization with Order to Cash views, Source to Pay views, AI-generated alerts and notifications, hierarchies, approval workflows, persona-based access and much more.</p>
-
-                        </div>
-                    </div>
-                    <div data-pos="-430, -760, -830" class="animation-step home__animation-step-2"></div>
-                    <div data-pos="-80, -760, -830"
-                        class="animation-step animation-step--md home__animation-step--md-2"></div>
-                    <div data-pos="-80, -100, -830"
-                        class="animation-step animation-step--sm home__animation-step--sm-2"></div>
-                </div> -->
+             
 
 
 
@@ -924,27 +812,7 @@
             <div data-pos="-370, -50, -500" class="animation-step animation-step--md home__animation-step--md-3"></div>
             <div data-pos="-370, -50, -500" class="animation-step animation-step--sm home__animation-step--sm-3"></div>
         </div>
-        <!-- <div class="section">
-            <div class="cz">
-                <div class="small-block-content">
-                    <div data-w-id="6e7645dc-45de-10a1-04a2-c61279457364" style="opacity:0"
-                        class="subtitle small-block__subtitle">Find Bugs Early</div>
-                    <h2 data-w-id="ac2071a7-abc2-6361-a57c-1767033932c9" style="opacity:0"
-                        class="h3 small-block__title mrg-pk40-mob-25">Integrated AppSec</h2>
-                    <div data-w-id="06ffcf9b-b752-5263-a3dc-c5c5df0a39b4" style="opacity:0"
-                        class="paragraph small-block__p">Ockom’s AppSec services are designed to integrate with each
-                        other and complement a full spectrum cybersecurity solution. Which is a lot of mumbo jumbo to
-                        say that we can help you make sure you didn’t build in a vulnerability into your code
-                        pre-deployment.</div><a aria-label="Go to &#x27;application security&#x27; page"
-                        class="btn small-block__btn w-button">Learn More</a>
-                    <div data-pos="110, -10, -830" class="animation-step home__animation-step-4"></div>
-                    <div data-pos="570, -350, -1030"
-                        class="animation-step animation-step--md home__animation-step--md-3"></div>
-                    <div data-pos="420, -350, -1030"
-                        class="animation-step animation-step--sm home__animation-step--sm-4"></div>
-                </div>
-            </div>
-        </div> -->
+        
         <!-- <div class="section razor-section">
             <div class="cz cz--1320">
                 <div data-w-id="7736306f-870c-4532-b3fd-f8c130cc9840" class="razor-wrp">
@@ -1003,38 +871,7 @@
                     </div>
                 </div>
             </div> -->
-        <!-- <div class="cz cz--under-threelines">
-                <div class="single-point-block">
-                    <h2 class="h2 under-threelines__title under-threelines__title--main"><span data-scrambler="true"
-                            class="h--accent">SINGLE POINT</span> <span data-scrambler="true">SOLUTION FOR CYBER RISK
-                            MANAGEMENT AND COMPLIANCE AUTOMATION</span></h2>
-                    <div class="single-point__content"><a class="w-inline-block">
-                            <div data-w-id="e4c5ccf0-0d6e-2038-74ae-4b66b8370b51" style="opacity:0"
-                                class="comming-soon">(coming soon)</div>
-                        </a>
-                        <div data-pos="-780, -210, -470" class="animation-step home__animation-step-5"></div>
-                        <div data-pos="-780, -210, -470"
-                            class="animation-step animation-step--md home__animation-step--md-4"></div>
-                        <div data-pos="-780, -210, -470"
-                            class="animation-step animation-step--sm home__animation-step--sm-5"></div>
-                        <div id="w-node-_505e3024-41de-8126-2b29-a63f27d1c46b-51b35c19">
-                            <p data-w-id="18dea82a-4daa-b602-05ee-7c343b96e655" style="opacity:0"
-                                class="paragraph gray--3">Razor is an all-in-one enterprise cyber risk management and
-                                compliance orchestration and automation tool. Razor helps you to organize, correlate,
-                                and visualize disparate data sets from common compliance scanners and tools -- giving
-                                you a single, centralized vantage point to view the risk, vulnerability, and compliance
-                                status of your entire organization. Razor’s flexible dashboards and comparison tools
-                                provide efficient, user-friendly options to increase organization-wide situational
-                                awareness -- allowing your cyber professionals to identify key areas of improvement and
-                                quickly develop plans of action to solve deficiencies. Razor also provides the tools
-                                necessary to streamline cyber assessments for FISMA, RMF, Penetration test, and
-                                vulnerability assessments.</p>
-                            <div class="btn--single-point-wrp"><a class="btn btn--single-point w-button">Contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+        
         </div>
     </main>
     <footer class="section footer">
